@@ -14,19 +14,29 @@
             <button onclick="setLanguage('fr')">FR</button>
         </div>
     </header>
-		<nav>
-		<ul>
-			<li><a href="index.html" data-lang-en="Home" data-lang-fr="Accueil">Home</a></li>
-			<li><a href="about.html" data-lang-en="About" data-lang-fr="À propos">About</a></li>
-			<li><a href="contact.html" data-lang-en="Contact" data-lang-fr="Contact">Contact</a></li>
-			<li><a href="finances.html" data-lang-en="Finances" data-lang-fr="Finances">Finances</a></li>
-			<li><a href="translation.html" data-lang-en="Translation Service" data-lang-fr="Service de Traduction">Service de Traduction</a></li>
-		</ul>
-	</nav>
+    <nav>
+        <ul>
+            <li><a href="index.html" data-lang-en="Home" data-lang-fr="Accueil">Home</a></li>
+            <li><a href="about.html" data-lang-en="About" data-lang-fr="À propos">About</a></li>
+            <li><a href="contact.html" data-lang-en="Contact" data-lang-fr="Contact">Contact</a></li>
+            <li><a href="finances.html" data-lang-en="Finances" data-lang-fr="Finances">Finances</a></li>
+            <li><a href="translation.html" data-lang-en="Translation Service" data-lang-fr="Service de Traduction">Service de Traduction</a></li>
+        </ul>
+    </nav>
     <main>
+        <div class="filter-section">
+            <label for="filter-select" data-lang-en="Sort by:" data-lang-fr="Trier par:">Trier par:</label>
+            <select id="filter-select" onchange="sortBooks()">
+                <option value="date" data-lang-en="Date" data-lang-fr="Date">Date</option>
+                <option value="author" data-lang-en="Author" data-lang-fr="Auteur">Auteur</option>
+                <option value="theme" data-lang-en="Theme" data-lang-fr="Thème">Thème</option>
+                <option value="wordCount" data-lang-en="Word Count" data-lang-fr="Nombre de mots">Nombre de mots</option>
+            </select>
+        </div>
+
         <div class="book-list">
             <!-- Répétez pour chaque livre -->
-            <div class="book-item">
+            <div class="book-item" data-date="2024-07-04" data-author="Gemini 1.5 flash" data-theme="Children's Story" data-wordcount="12800">
                 <img src="images/La magie des rêves de Xavier.jpg" alt="La magie des rêves de Xavier">
                 <div class="book-info">
                     <h2 data-lang-en="The Magic of Xavier's Dreams" data-lang-fr="La magie des rêves de Xavier">La magie des rêves de Xavier</h2>
@@ -45,7 +55,8 @@
                     <p data-lang-en="Publication Date: July 4, 2024" data-lang-fr="Date de publication : 4 juillet 2024">Date de publication : 4 juillet 2024</p>
                 </div>
             </div>
-            <div class="book-item">
+
+            <div class="book-item" data-date="2024-07-04" data-author="Gemini 1.5 flash" data-theme="Science fiction" data-wordcount="34150">
                 <img src="images/Mars un nouveau départ.jpg" alt="Mars un nouveau départ">
                 <div class="book-info">
                     <h2 data-lang-en="Mars A New Beginning" data-lang-fr="Mars un nouveau départ">Mars un nouveau départ</h2>
@@ -64,7 +75,8 @@
                     <p data-lang-en="Publication Date: July 4, 2024" data-lang-fr="Date de publication : 4 juillet 2024">Date de publication : 4 juillet 2024</p>
                 </div>
             </div>
-            <div class="book-item">
+
+            <div class="book-item" data-date="2024-07-04" data-author="Gemini 1.5 flash" data-theme="Mystery" data-wordcount="32100">
                 <img src="images/L'Ombre du Serpent.jpg" alt="L'Ombre du Serpent">
                 <div class="book-info">
                     <h2 data-lang-en="The Shadow of the Serpent" data-lang-fr="L'Ombre du Serpent">L'Ombre du Serpent</h2>
@@ -83,7 +95,8 @@
                     <p data-lang-en="Publication Date: July 4, 2024" data-lang-fr="Date de publication : 4 juillet 2024">Date de publication : 4 juillet 2024</p>
                 </div>
             </div>
-            <div class="book-item">
+
+            <div class="book-item" data-date="2024-07-05" data-author="Gemini 1.5 flash" data-theme="Fantasy" data-wordcount="44400">
                 <img src="images/Les Gardiens de la pierre.jpg" alt="Les Gardiens de la pierre">
                 <div class="book-info">
                     <h2 data-lang-en="The Keepers of the Stone" data-lang-fr="Les Gardiens de la pierre">Les Gardiens de la pierre</h2>
@@ -102,7 +115,8 @@
                     <p data-lang-en="Publication Date: July 5, 2024" data-lang-fr="Date de publication : 5 juillet 2024">Date de publication : 5 juillet 2024</p>
                 </div>
             </div>
-            <div class="book-item">
+
+            <div class="book-item" data-date="2024-07-06" data-author="Gemini 1.5 flash" data-theme="Romance" data-wordcount="64100">
                 <img src="images/Entre Deux Mondes  Amour et Héritage.jpg" alt="Entre Deux Mondes  Amour et Héritage">
                 <div class="book-info">
                     <h2 data-lang-en="Between Two Worlds: Love and Legacy" data-lang-fr="Entre Deux Mondes: Amour et Héritage">Entre Deux Mondes: Amour et Héritage</h2>
@@ -122,6 +136,7 @@
                 </div>
             </div>
         </div>
+
         <div class="donate-section">
             <h3 data-lang-en="Support Us" data-lang-fr="Soutenez-nous">Soutenez-nous</h3>
             <p data-lang-en="Support us with a donation to help us use more sophisticated LLMs and develop our tools." data-lang-fr="Soutenez-nous avec un don pour nous aider à utiliser des LLMs plus sophistiqués et à développer nos outils.">Soutenez-nous avec un don pour nous aider à utiliser des LLMs plus sophistiqués et à développer nos outils.</p>
@@ -143,5 +158,6 @@
         <p data-lang-en="&copy; 2024 Sphere A.I. Books" data-lang-fr="&copy; 2024 Livres Sphere A.I.">&copy; 2024 Sphere A.I. Books</p>
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/sort.js"></script> <!-- Ajouter ce script -->
 </body>
 </html>

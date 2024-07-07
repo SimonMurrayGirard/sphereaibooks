@@ -1,5 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    setLanguage('en'); // Default language
+    const savedLanguage = localStorage.getItem('language');
+    if (savedLanguage) {
+        setLanguage(savedLanguage);
+    } else {
+        const browserLanguage = navigator.language || navigator.userLanguage;
+        if (browserLanguage.startsWith('fr')) {
+            setLanguage('fr');
+        } else {
+            setLanguage('en');
+        }
+    }
 });
 
 function setLanguage(language) {
@@ -8,4 +18,5 @@ function setLanguage(language) {
             element.textContent = element.getAttribute(`data-lang-${language}`);
         }
     });
+    localStorage.setItem('language', language); // Save preference to localStorage
 }
