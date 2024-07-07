@@ -6,7 +6,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color: #000; /* Assurez-vous que le texte est lisible sur le fond */
+    color: #000;
 }
 
 header {
@@ -17,19 +17,19 @@ header {
     padding: 20px 0;
     text-align: center;
     position: relative;
-    height: 150px; /* Ajustez la hauteur selon vos besoins */
+    height: 150px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 4em; /* Ajustez la taille selon vos besoins */
+    font-size: 4em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .language-switch {
     position: absolute;
-    top: 10px; /* Ajustez la position verticale si nécessaire */
-    right: 10px; /* Ajustez la position horizontale si nécessaire */
+    top: 10px;
+    right: 10px;
 }
 
 .language-switch button {
@@ -79,6 +79,7 @@ main {
 
 .book-item {
     display: flex;
+    flex-direction: column;
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -87,14 +88,17 @@ main {
 }
 
 .book-item img {
-    max-width: 150px;
+    width: 100%;
     height: auto;
-    margin-right: 20px;
+    max-width: 150px;
+    margin-bottom: 20px;
 }
 
 .book-info {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .book-info h2 {
@@ -112,33 +116,20 @@ footer {
     color: #fff;
 }
 
-.month-report {
-    margin-bottom: 30px;
-}
+@media (min-width: 600px) {
+    .book-item {
+        flex-direction: row;
+        align-items: flex-start;
+    }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
+    .book-item img {
+        max-width: 150px;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
 
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+    .book-info {
+        align-items: flex-start;
+        text-align: left;
+    }
 }
-
-th {
-    background-color: #f2f2f2;
-}
-
-td.amount {
-    text-align: right;
-    width: 15%;
-}
-
-.donate-section {
-    text-align: center;
-    margin-top: 40px;
-}
-
