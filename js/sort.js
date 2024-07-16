@@ -10,7 +10,7 @@ function sortBooks() {
     books.sort((a, b) => {
         switch (filter) {
             case 'date':
-                return new Date(a.dataset.date) - new Date(b.dataset.date);
+                return new Date(b.dataset.date) - new Date(a.dataset.date);
             case 'author':
                 return a.dataset.author.localeCompare(b.dataset.author);
             case 'theme':
