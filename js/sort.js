@@ -10,7 +10,7 @@ function sortBooks() {
     books.sort((a, b) => {
         switch (filter) {
             case 'date':
-                return new Date(b.dataset.date) - new Date(a.dataset.date);
+                return new Date(b.dataset.date) - new Date(a.dataset.date); // Inverser pour les plus récents en haut
             case 'author':
                 return a.dataset.author.localeCompare(b.dataset.author);
             case 'theme':
