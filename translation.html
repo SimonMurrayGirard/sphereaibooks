@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service de Traduction - Sphere A.I. Books</title>
     <link rel="stylesheet" href="css/styles.css">
     <meta name="description" content="Service de traduction rapide et précis pour documents txt, Word, et PDF. Disponible en français, anglais, espagnol et autres langues.">
     <meta name="keywords" content="traduction, service de traduction, traduction de documents, traduction rapide, traduction française, traduction anglaise, traduction espagnole">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
 </head>
 <body>
     <header>
@@ -52,12 +62,25 @@
         <p data-lang-en="Confidentiality is guaranteed, and you can request the destruction of documents after the translation is delivered." data-lang-fr="La confidentialité est garantie et vous pouvez demander la destruction des documents après la remise de la traduction.">La confidentialité est garantie et vous pouvez demander la destruction des documents après la remise de la traduction.</p>
         <p data-lang-en="Translation is automated using LLM models, ensuring fast and accurate service." data-lang-fr="La traduction est automatisée grâce à des modèles de langage LLM, ce qui garantit un service rapide et précis.">La traduction est automatisée grâce à des modèles de langage LLM, ce qui garantit un service rapide et précis.</p>
         <p data-lang-en="For documents under 20MB, you can send the document to sphereaibooks@gmail.com with the completed PDF form for a cost estimate." data-lang-fr="Pour les documents de moins de 20MB, vous pouvez envoyer le document à sphereaibooks@gmail.com avec le formulaire PDF rempli pour une estimation des coûts.">Pour les documents de moins de 20MB, vous pouvez envoyer le document à sphereaibooks@gmail.com avec le formulaire PDF rempli pour une estimation des coûts.</p>
-        <p data-lang-en="You can also quickly estimate costs by pasting the text into a Word document and checking the word count at the bottom of the document." data-lang-fr="Vous pouvez également estimer rapidement les coûts en collant le texte dans un document Word et en vérifiant le nombre de mots au bas du document.">Vous pouvez également estimer rapidement les coûts en collant le texte dans un document Word et en vérifiant le nombre de mots au bas du document.</p>
+        <p data-lang-en="Quickly estimate translation costs by uploading your text file to our tool to get an accurate word count." data-lang-fr="Estimez rapidement les coûts de traduction en téléchargeant votre fichier texte dans notre outil pour obtenir un nombre de mots précis.">Estimez rapidement les coûts de traduction en téléchargeant votre fichier texte dans notre outil pour obtenir un nombre de mots précis.</p>
+
+        <!-- New Section for File Upload -->
+        <h3 data-lang-en="Determine the number of words with our tool" data-lang-fr="Déterminez le nombre de mots grâce à notre outil">Déterminez le nombre de mots grâce à notre outil</h3>
+        <form id="fileUploadForm">
+            <label for="fileInput" data-lang-en="Upload your text file (.txt, .doc, .docx, .pdf)" data-lang-fr="Déposez votre fichier texte (.txt, .doc, .docx, .pdf)">Déposez votre fichier texte (.txt, .doc, .docx, .pdf)</label>
+            <input type="file" id="fileInput" accept=".txt,.doc,.docx,.pdf" style="display: none;" onchange="updateFileName()" />
+            <button type="button" id="uploadButton" data-lang-en="Upload" data-lang-fr="Téléverser" onclick="document.getElementById('fileInput').click()">Téléverser</button>
+            <div id="fileChosen"></div>
+            <button type="button" id="analyzeButton" data-lang-en="Analyze" data-lang-fr="Analyser" onclick="uploadFile()">Analyser</button>
+        </form>
+        <div id="wordCountResult" data-lang-en="Word Count: " data-lang-fr="Nombre de mots: ">Nombre de mots: </div>
+
     </main>
     <footer>
         <p data-lang-en="&copy; 2024 Sphere A.I. Books" data-lang-fr="&copy; 2024 Livres Sphere A.I.">&copy; 2024 Sphere A.I. Books</p>
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/fileProcessor.js"></script>
 </body>
 </html>
 

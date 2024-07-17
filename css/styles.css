@@ -133,3 +133,43 @@ footer {
         text-align: left;
     }
 }
+
+#fileUploadForm {
+    margin: 20px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#fileInput {
+    margin: 10px 0;
+    padding: 5px;
+}
+
+#fileUploadForm label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#fileUploadForm button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#fileUploadForm button:hover {
+    background-color: #0056b3;
+}
+
+#wordCountResult {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+}
