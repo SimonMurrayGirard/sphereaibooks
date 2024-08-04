@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-en="Translation Submission Form - Sphere A.I. Books" data-lang-fr="Formulaire de Soumission de Traduction - Sphere A.I. Books">Translation Submission Form - Sphere A.I. Books</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="Soumettez votre document pour traduction. Disponible en français, anglais, espagnol et autres langues.">
+    <meta name="keywords" content="soumission, formulaire de soumission, traduction de documents, service de traduction">
+    <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js" charset="utf-8"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0E75SPH8K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-D0E75SPH8K');
+    </script>
+
+    <script>
+      UPLOADCARE_PUBLIC_KEY = "your-uploadcare-public-key";
+    </script>
+</head>
+<body>
+    <header>
+        <h1 data-lang-en="Sphere A.I. Books" data-lang-fr="Livres Sphere A.I.">Sphere A.I. Books</h1>
+        <div class="language-switch">
+            <button onclick="setLanguage('en')">EN</button>
+            <button onclick="setLanguage('fr')">FR</button>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" data-lang-en="Home" data-lang-fr="Accueil">Home</a></li>
+            <li><a href="about.html" data-lang-en="About" data-lang-fr="À propos">About</a></li>
+            <li><a href="contact.html" data-lang-en="Contact" data-lang-fr="Contact">Contact</a></li>
+            <li><a href="translation.html" data-lang-en="Translation Service" data-lang-fr="Service de Traduction">Translation Service</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2 data-lang-en="Translation Submission Form" data-lang-fr="Formulaire de Soumission de Traduction">Formulaire de Soumission de Traduction</h2>
+        <p data-lang-en="Please fill out this form to submit a document translation request. Note that only the textual parts of the document will be translated. Images, tables, and other formatting elements will not be included in the translated document. You will need to reformat the document yourself after receiving the translation." data-lang-fr="Veuillez remplir ce formulaire pour soumettre une demande de traduction de document. Notez que seules les parties textuelles du document seront traduites. Les images, tableaux, et autres éléments de mise en page ne seront pas inclus dans le document traduit. Vous devrez rétablir la mise en page vous-même après réception de la traduction.">Veuillez remplir ce formulaire pour soumettre une demande de traduction de document. Notez que seules les parties textuelles du document seront traduites. Les images, tableaux, et autres éléments de mise en page ne seront pas inclus dans le document traduit. Vous devrez rétablir la mise en page vous-même après réception de la traduction.</p>
+        
+        <form action="https://formspree.io/f/mzzpryaz" method="POST">
+            <label for="name" data-lang-en="Name:" data-lang-fr="Nom:">Nom:</label>
+            <input type="text" name="name" id="name" required>
+            <br>
+
+            <label for="email" data-lang-en="Email Address:" data-lang-fr="Adresse Email:">Adresse Email:</label>
+            <input type="email" name="email" id="email" required>
+            <br>
+            <br>
+
+            <label data-lang-en="Original Document Language:" data-lang-fr="Langue Originale du Document:">Langue Originale du Document:</label>
+            <br>
+            <input type="radio" name="original_language" value="Français" id="lang-fr" required>
+            <label for="lang-fr" data-lang-en="French" data-lang-fr="Français">Français</label>
+            <br>
+            <input type="radio" name="original_language" value="Anglais" id="lang-en" required>
+            <label for="lang-en" data-lang-en="English" data-lang-fr="Anglais">Anglais</label>
+            <br>
+            <input type="radio" name="original_language" value="Espagnol" id="lang-es" required>
+            <label for="lang-es" data-lang-en="Spanish" data-lang-fr="Espagnol">Espagnol</label>
+            <br>
+            <input type="radio" name="original_language" value="Autre" id="lang-other" required>
+            <label for="lang-other" data-lang-en="Other:" data-lang-fr="Autre :">Autre :</label>
+            <input type="text" name="original_language_other" id="lang-other-text">
+            <br>
+
+            <label data-lang-en="Translation Language:" data-lang-fr="Langue de Traduction:">Langue de Traduction:</label>
+            <br>
+            <input type="radio" name="translation_language" value="Français" id="trans-fr" required>
+            <label for="trans-fr" data-lang-en="French" data-lang-fr="Français">Français</label>
+            <br>
+            <input type="radio" name="translation_language" value="Anglais" id="trans-en" required>
+            <label for="trans-en" data-lang-en="English" data-lang-fr="Anglais">Anglais</label>
+            <br>
+            <input type="radio" name="translation_language" value="Espagnol" id="trans-es" required>
+            <label for="trans-es" data-lang-en="Spanish" data-lang-fr="Espagnol">Espagnol</label>
+            <br>
+            <input type="radio" name="translation_language" value="Autre" id="trans-other" required>
+            <label for="trans-other" data-lang-en="Other:" data-lang-fr="Autre :">Autre :</label>
+            <input type="text" name="translation_language_other" id="trans-other-text">
+            <br>
+            <br>			
+			
+            <label data-lang-en="Document Type:" data-lang-fr="Type de Document:">Type de Document:</label>
+            <br>
+            <input type="checkbox" name="document_type" value="Livre" id="doc-book">
+            <label for="doc-book" data-lang-en="Book" data-lang-fr="Livre">Livre</label>
+            <br>
+            <input type="checkbox" name="document_type" value="Document pour Travailleurs Étrangers" id="doc-foreign-workers">
+            <label for="doc-foreign-workers" data-lang-en="Document for Foreign Workers" data-lang-fr="Document pour Travailleurs Étrangers">Document pour Travailleurs Étrangers</label>
+            <br>
+            <input type="checkbox" name="document_type" value="Instructions" id="doc-instructions">
+            <label for="doc-instructions" data-lang-en="Instructions" data-lang-fr="Instructions">Instructions</label>
+            <br>
+            <input type="checkbox" name="document_type" value="Document Commercial" id="doc-commercial">
+            <label for="doc-commercial" data-lang-en="Commercial Document" data-lang-fr="Document Commercial">Document Commercial</label>
+            <br>
+            <input type="checkbox" name="document_type" value="Procédures de Travail ou de Sécurité" id="doc-work-safety">
+            <label for="doc-work-safety" data-lang-en="Work or Safety Procedures" data-lang-fr="Procédures de Travail ou de Sécurité">Procédures de Travail ou de Sécurité</label>
+            <br>
+            <input type="checkbox" name="document_type" value="Autre" id="doc-other">
+            <label for="doc-other" data-lang-en="Other (please specify):" data-lang-fr="Autre (veuillez préciser) :">Autre (veuillez préciser) :</label>
+            <input type="text" name="document_type_other" id="doc-other-text">
+            <br>
+            <br>
+            
+            <label for="specific_instructions" data-lang-en="Specific Instructions or Comments:" data-lang-fr="Instructions Spécifiques ou Commentaires:">Instructions Spécifiques ou Commentaires:</label>
+            <textarea name="specific_instructions" id="specific_instructions"></textarea>
+            <br>
+			<br>
+            
+            <label for="word_count" data-lang-en="Estimated Word Count of Document:" data-lang-fr="Nombre de Mots Estimé du Document:">Nombre de Mots Estimé du Document:</label>
+            <input type="number" name="word_count" id="word_count" required>
+            <br>
+            
+            <label for="deadline" data-lang-en="Translation Deadline (if different from the standard 24-48 hours):" data-lang-fr="Date Limite de Traduction (si différente du délai standard de 24-48 heures):">Date Limite de Traduction (si différente du délai standard de 24-48 heures):</label>
+            <input type="date" name="deadline" id="deadline">
+            <br>
+            <br>
+            
+            <label data-lang-en="Would you like the documents to be destroyed after translation (72 hours retention)?" data-lang-fr="Voulez-vous que les documents soient détruits après la traduction (72 heures de conservation) ?">Voulez-vous que les documents soient détruits après la traduction (72 heures de conservation) ?</label>
+            <br>
+            <input type="radio" name="destroy_after_translation" value="Oui" id="destroy-yes" required>
+            <label for="destroy-yes" data-lang-en="Yes" data-lang-fr="Oui">Oui</label>
+            <br>
+            <input type="radio" name="destroy_after_translation" value="Non" id="destroy-no" required>
+            <label for="destroy-no" data-lang-en="No" data-lang-fr="Non">Non</label>
+            <br>
+            
+            <p data-lang-en="I understand that Sphere A.I. Books guarantees the confidentiality of documents submitted for translation and agrees to destroy the documents upon request after the translation is delivered. No solicitation will be made to clients." data-lang-fr="Je comprends que Sphere A.I. Books garantit la confidentialité des documents soumis pour traduction et accepte de détruire les documents sur demande après la remise de la traduction. Aucune sollicitation ne sera faite auprès des clients.">Je comprends que Sphere A.I. Books garantit la confidentialité des documents soumis pour traduction et accepte de détruire les documents sur demande après la remise de la traduction. Aucune sollicitation ne sera faite auprès des clients.</p>
+            <br>
+            
+            <label for="file" data-lang-en="Upload a file:" data-lang-fr="Téléverser un fichier:">Téléverser un fichier:</label>
+            <input type="hidden" role="uploadcare-uploader" data-public-key="your-uploadcare-public-key">
+            <br>
+            
+            <button type="submit" data-lang-en="Submit" data-lang-fr="Soumettre">Soumettre</button>
+        </form>
+    </main>
+    <footer>
+        <p data-lang-en="&copy; 2024 Sphere A.I. Books" data-lang-fr="&copy; 2024 Livres Sphere A.I.">&copy; 2024 Sphere A.I. Books</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
