@@ -1,0 +1,60 @@
+<?xml version="1.2" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Page d'accueil -->
+  <url>
+    <loc>https://www.sphereaibooks.ca/index.html</loc>
+    <lastmod>2024-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Archives -->
+  <url>
+    <loc>https://www.sphereaibooks.ca/archives.html</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- À propos -->
+  <url>
+    <loc>https://www.sphereaibooks.ca/about.html</loc>
+    <lastmod>2024-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Service d'écriture de livre -->
+  <url>
+    <loc>https://www.sphereaibooks.ca/book-writing-service.html</loc>
+    <lastmod>2024-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://www.sphereaibooks.ca/contact.html</loc>
+    <lastmod>2024-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Confirmation de soumission (livre) -->
+  <url>
+    <loc>https://www.sphereaibooks.ca/confirmation_book.html</loc>
+    <lastmod>2024-08-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Blog -->
+  <url>
+    <loc>https://www.sphereaibooks.ca/blog.html</loc>
+    <lastmod>2024-08-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>

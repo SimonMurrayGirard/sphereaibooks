@@ -20,6 +20,7 @@ function setLanguage(language) {
     });
     localStorage.setItem('language', language); // Save preference to localStorage
     updateWordCountLabel(language); // Update the word count label
+    updateFileInputLabel(language); // Update the file input label
 }
 
 function updateWordCountLabel(language) {
@@ -33,12 +34,13 @@ function updateWordCountLabel(language) {
     }
 }
 
-function updateFileName() {
-    const fileInput = document.getElementById('fileInput');
-    const fileChosen = document.getElementById('fileChosen');
-    if (fileInput.files.length > 0) {
-        fileChosen.textContent = fileInput.files[0].name;
-    } else {
-        fileChosen.textContent = '';
+function updateFileInputLabel(language) {
+    const fileLabel = document.getElementById('file-label');
+    if (fileLabel) {
+        if (language === 'fr') {
+            fileLabel.textContent = 'Téléverser un fichier:';
+        } else {
+            fileLabel.textContent = 'Upload a file:';
+        }
     }
 }

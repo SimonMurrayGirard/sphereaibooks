@@ -2,10 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('../images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-color: #ffffff; /* Pour voir les éléments plus clairement */
     color: #000;
 }
 
@@ -17,19 +14,23 @@ header {
     padding: 20px 0;
     text-align: center;
     position: relative;
-    height: 150px;
+    min-height: 150px;
+    box-sizing: border-box;
+    z-index: 100; /* Plus élevé pour garantir qu'il reste visible */
 }
 
 header h1 {
     margin: 0;
     font-size: 4em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 110;
 }
 
 .language-switch {
     position: absolute;
     top: 10px;
     right: 10px;
+    z-index: 120; /* Toujours visible au-dessus du header */
 }
 
 .language-switch button {
@@ -42,7 +43,10 @@ nav ul {
     list-style-type: none;
     padding: 0;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 0;
+    z-index: 90; /* Juste en dessous du header */
+    position: relative;
 }
 
 nav ul li {
@@ -57,9 +61,11 @@ nav ul li a {
 
 main {
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     margin: 20px;
     border-radius: 10px;
+    z-index: 80; /* Sous le nav */
+    position: relative;
 }
 
 .filter-section {
@@ -112,8 +118,10 @@ main {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
+    z-index: 70;
+    position: relative;
 }
 
 @media (min-width: 600px) {
@@ -173,3 +181,13 @@ footer {
     font-size: 1.5em;
     text-align: center;
 }
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
